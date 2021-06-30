@@ -1,0 +1,17 @@
+<div class="row">
+	<div>
+		<h2>Créer un compte</h2>
+		<form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+			<div class="form-group">
+				<label for="email">Email</label>
+				<input type="text" id="email" class="form-control" formControlName="email">
+			</div>
+			<div class="form-group">
+				<label for="password">Password</label>
+				<input type="password" id="password" class="form-control" formControlName="password">
+			</div>
+			<button class="btn btn-primary" type="submit" [disabled]="signupForm.invalid">Créer mon compte</button>
+		</form>
+	<p class="test-danger">{{errorMessage}}</p>
+	</div>
+</div>
